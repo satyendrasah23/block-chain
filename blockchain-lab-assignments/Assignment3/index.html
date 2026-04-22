@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Blockchain Submission Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Import ethers.js directly via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/ethers@6.6.2/dist/ethers.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Student Blockchain Submission Portal</h1>
+        
+        <div class="wallet-section">
+            <button id="connectWalletBtn">Connect Wallet</button>
+            <p id="walletAddress" class="hidden">Wallet connected: <span id="addressText"></span></p>
+            <p id="networkStatus" class="status-message"></p>
+        </div>
+
+        <div class="form-section">
+            <div class="input-group">
+                <label for="studentId">Student ID / PRN</label>
+                <input type="text" id="studentId" placeholder="Enter your PRN or ID">
+            </div>
+            
+            <div class="input-group">
+                <label for="ipfsCid">IPFS CID</label>
+                <input type="text" id="ipfsCid" placeholder="Enter IPFS Content ID">
+            </div>
+
+            <button id="submitDataBtn" disabled>Submit to Blockchain</button>
+        </div>
+
+        <div class="status-section">
+            <p id="transactionStatus" class="status-message"></p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
